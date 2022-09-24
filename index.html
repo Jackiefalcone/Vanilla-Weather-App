@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="src/styl.css" />
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="src/styl.css" />
 </head>
    
     <title>Weather App</title>
@@ -16,15 +17,13 @@
         <div class="weather-app-wrapper">
             <div class="weather-app">
                 <div class="overview">
-    <h1> 
-        New York 
+    <h1 id="city">  
     </h1>
     <ul>
         <li>
             Friday 05:00
         </li>
-        <li>
-            clear
+        <li id="description">
         </li>
     </ul>
     </div>
@@ -32,20 +31,17 @@
         <div class="col-6">
             <div class="d-flex weather-temperature">
             <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear" id="icon"/>
-           <strong> 12</strong>
+           <strong id="temperature"></strong>
            <span class="units">°C | <a href="#"> °F </a> </span>
         </div>
         </div>
         <div class="col-6">
            <ul>
             <li>
-                precipitation: 0%
+                Humidity: <span id="humidity"></span>%
             </li>
             <li>
-                Humidity: 73%
-            </li>
-            <li>
-               Wind: 2km/h 
+               Wind: <span id="wind"></span>km/h 
             </li>
            </ul>
         </div>
